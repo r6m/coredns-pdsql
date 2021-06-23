@@ -99,6 +99,10 @@ func (pdb PowerDNSGenericSQLBackend) ServeDNS(ctx context.Context, w dns.Respons
 				} else {
 					rr.Ptr = v.Content + "."
 				}
+			case *dns.MX:
+				rr.Hdr = hrd
+				rr.Mx = v.Content
+				rr.Preference = uint16(v.Prio)
 			default:
 				// drop unsupported
 			}
