@@ -62,6 +62,8 @@ github.com/Caffeine-01/coredns-pdsql v0.0.0 h1:v6RvtvzdEJq2kukAmvXlH+mtcsrib0XB1
 github.com/Caffeine-01/coredns-pdsql v0.0.0/go.mod h1:JsmqSr38sT3hNJ0Uj4z8UCTHfFQ2Z36v9dTczmI23Os=
 github.com/Caffeine-01/coredns-pdsql v0.0.1 h1:C41snWN7tffBKuLnEZsm/ssAzQORuGIVMC3987mWEns=
 github.com/Caffeine-01/coredns-pdsql v0.0.1/go.mod h1:P4n1goQzMCmtoOexcMp6UxzwBCtTZxdPb2X5Ojd69vk=
+github.com/Caffeine-01/coredns-pdsql v0.0.3 h1:8S+QKbrfY2m3Tn4LoXYO5SCWtDD5bSAJ8cu9t/Qj7JM=
+github.com/Caffeine-01/coredns-pdsql v0.0.3/go.mod h1:iokrkN/7nYp87A7rtIBzPwi0ZBJJWpRNUGSjo4ZUxN8=
 github.com/DataDog/datadog-go v3.5.0+incompatible/go.mod h1:LButxg5PwREeZtORoXG3tL4fMGNddJ+vMq1mwgfaqoQ=
 github.com/Knetic/govaluate v3.0.1-0.20171022003610-9aa49832a739+incompatible/go.mod h1:r7JcOSlj0wfOMncg0iLm8Leh48TZaKVeNIfJntJ2wa0=
 github.com/NYTimes/gziphandler v0.0.0-20170623195520-56545f4a5d46/go.mod h1:3wb06e3pkSAbeQ52E9H9iFoQsEEwGN64994WTCIhntQ=

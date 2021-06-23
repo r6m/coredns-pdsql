@@ -114,6 +114,9 @@ func (pdb PowerDNSGenericSQLBackend) ServeDNS(ctx context.Context, w dns.Respons
 		                  rr.Port = uint16(i)
 	                        }
 				rr.Target = words[2]
+			case *dns.CNAME:
+				rr.Hdr = hrd
+				rr.Target = v.Content
 			default:
 				// drop unsupported
 			}
