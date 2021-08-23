@@ -2,10 +2,11 @@
 package pdsql
 
 import (
-	"github.com/wenerme/coredns-pdsql/pdnsmodel"
 	"net"
 	"strconv"
 	"strings"
+
+	"github.com/wenerme/coredns-pdsql/pdnsmodel"
 
 	"github.com/coredns/coredns/plugin"
 	"github.com/coredns/coredns/request"
@@ -106,13 +107,13 @@ func (pdb PowerDNSGenericSQLBackend) ServeDNS(ctx context.Context, w dns.Respons
 			case *dns.SRV:
 				rr.Hdr = hrd
 				rr.Priority = uint16(v.Prio)
-                                words := strings.Fields(v.Content)		         
+				words := strings.Fields(v.Content)
 				if i, err := strconv.Atoi(words[0]); err == nil {
-		                  rr.Weight = uint16(i)
-	                        }
+					rr.Weight = uint16(i)
+				}
 				if i, err := strconv.Atoi(words[1]); err == nil {
-		                  rr.Port = uint16(i)
-	                        }
+					rr.Port = uint16(i)
+				}
 				rr.Target = words[2]
 			case *dns.CNAME:
 				rr.Hdr = hrd
@@ -142,7 +143,7 @@ func (pdb PowerDNSGenericSQLBackend) SearchWildcard(qname string, qtype uint16) 
 	typ := dns.TypeToString[qtype]
 	name = qnameNoDot
 NEXT_ZONE:
-	if i := strings.IndexRune(name, '.'); i > 0 {
+	if i := strings.IndexRune(name, '.'); i > 0 && strings.Count(Name, ".") > 1 {
 		name = name[i+1:]
 	} else {
 		return
