@@ -1,4 +1,4 @@
-module github.com/Caffeine-01/coredns-pdsql
+module github.com/r6m/coredns-pdsql
 
 go 1.13
 
@@ -11,4 +11,4 @@ require (
 	golang.org/x/net v0.0.0-20210614182718-04defd469f4e
 )
 
-replace github.com/wenerme/coredns-pdsql => github.com/Caffeine-01/coredns-pdsql v0.0.3
+replace github.com/wenerme/coredns-pdsql => github.com/r6m/coredns-pdsql v0.0.1
