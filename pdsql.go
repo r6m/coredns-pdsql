@@ -99,6 +99,24 @@ func (pdb PowerDNSGenericSQLBackend) ServeDNS(ctx context.Context, w dns.Respons
 				} else {
 					rr.Ptr = v.Content + "."
 				}
+			case *dns.MX:
+				rr.Hdr = hrd
+				rr.Mx = v.Content
+				rr.Preference = uint16(v.Prio)
+			case *dns.SRV:
+				rr.Hdr = hrd
+				rr.Priority = uint16(v.Prio)
+                                words := strings.Fields(v.Content)		         
+				if i, err := strconv.Atoi(words[0]); err == nil {
+		                  rr.Weight = uint16(i)
+	                        }
+				if i, err := strconv.Atoi(words[1]); err == nil {
+		                  rr.Port = uint16(i)
+	                        }
+				rr.Target = words[2]
+			case *dns.CNAME:
+				rr.Hdr = hrd
+				rr.Target = v.Content
 			default:
 				// drop unsupported
 			}
