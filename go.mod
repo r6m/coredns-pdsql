@@ -11,4 +11,4 @@ require (
 	golang.org/x/net v0.0.0-20210813160813-60bc85c4be6d
 )
 
-replace github.com/wenerme/coredns-pdsql => github.com/r6m/coredns-pdsql v0.0.3
+replace github.com/wenerme/coredns-pdsql => github.com/r6m/coredns-pdsql v0.0.4
